@@ -1,0 +1,42 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Senha</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <form id="password-form">
+        <h1>Verificar Senha</h1>
+        <label for="password">Senha:</label>
+        <input type="text" id="password" name="password" placeholder="Digite sua senha">
+        <button type="submit">Verificar</button>
+        <div id="result"></div>
+    </form>
+
+    <script>
+        document.getElementById('password-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const password = document.getElementById('password').value;
+    
+            fetch('/check-password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ password: password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerText = `Força da senha: ${data.score}`;
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "zxcvbn-custom",
+  "version": "1.0.0",
+  "description": "Simple application using zxcvbn checking diferents words",
+  "main": "app.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "zxcvbn": "^4.4.2"
+  }
+}
