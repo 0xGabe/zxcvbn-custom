@@ -13,7 +13,7 @@ A utilização da biblioteca zxcvbn é uma alternativa algorítmica para políti
 
 **Usabilidade:** O zxcvbn foi projetado para fornecer feedback instantâneo em interfaces simples e sem regras rigorosas. Além da estimativa de força, o zxcvbn inclui feedback verbal mínimo e direcionado, ajudando os usuários a criar senhas mais difíceis de adivinhar.
 
-**Desvantagem:** Conforme descrito no inicio deste documento, a biblioteca tem como objetivo senhas e padrões americanos, o que nos obriga a criar **wordlists** voltados para o cenário brasileiro 
+**Desvantagem:** Conforme descrito no inicio deste documento, a biblioteca tem como objetivo senhas e padrões americanos, o que nos obriga a criar **wordlists** voltados para o cenário brasileiro.
 
 ## Como instalar
 
@@ -73,4 +73,4 @@ Ao adicionar **Empresa@2024** a nossa *wordlist* definida pelo arquivo JSON e re
 
 ![](/img/validacao-semantica.png)
 
-Note que a força da senha foi retornada para 0, diante disso, se torna possível realizar a validação semântica da senha inserida pelo usuário em conjunto com a lib *zxcvbn*
+Note que a força da senha foi retornada para 0, diante disso, se torna possível realizar a validação semântica da senha inserida pelo usuário em conjunto com a lib *zxcvbn*.
